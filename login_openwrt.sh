@@ -9,7 +9,7 @@ CHANNEL=cmcc
 
 WANIP=$(ifconfig eth0 | grep 'inet addr' | cut -d ':' -f2 | cut -d ' ' -f1)
 
-url="https://www.baidu.com"
+url="http://www.baidu.com"
 status=$(curl -IsS -m 5 $url | head -n 1 | cut -d ' ' -f 2)
 
 if [ "$status" = "200" ]; then
